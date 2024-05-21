@@ -15,6 +15,7 @@ script = ExtResource("1_4g7ap")
 position = Vector2(64, 523)
 
 [node name="Camera2D" type="Camera2D" parent="Insaneplayer"]
+position = Vector2(491, -133)
 limit_top = 0
 limit_bottom = 0
 
