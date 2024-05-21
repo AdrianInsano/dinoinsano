@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4n4k6q80vxn4"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_4g7ap"]
+[ext_resource type="PackedScene" uid="uid://c64fhpxq7wwr1" path="res://background/background.tscn" id="1_l7hmg"]
+[ext_resource type="PackedScene" uid="uid://bltpk6hbm1mh2" path="res://dinoplayer/insaneplayer.tscn" id="2_lp8dr"]
+[ext_resource type="PackedScene" uid="uid://djg4olvx8aej1" path="res://floor/floor.tscn" id="3_syb5l"]
+
+[node name="Main" type="Node2D"]
+position = Vector2(-4, 18)
+script = ExtResource("1_4g7ap")
+
+[node name="Background" parent="." instance=ExtResource("1_l7hmg")]
+
+[node name="Insaneplayer" parent="." instance=ExtResource("2_lp8dr")]
+position = Vector2(64, 523)
+
+[node name="Camera2D" type="Camera2D" parent="Insaneplayer"]
+limit_left = 0
+limit_top = 0
+limit_bottom = 0
+
+[node name="Floor" parent="." instance=ExtResource("3_syb5l")]
+position = Vector2(-28, 2)
