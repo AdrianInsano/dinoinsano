@@ -21,3 +21,7 @@ limit_bottom = 0
 
 [node name="Floor" parent="." instance=ExtResource("3_syb5l")]
 position = Vector2(-28, 2)
+
+[node name="MobTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
