@@ -1,34 +1,109 @@
-[gd_scene load_steps=5 format=3 uid="uid://4unoy5ofvayh"]
+[gd_scene load_steps=10 format=3 uid="uid://4unoy5ofvayh"]
 
 [ext_resource type="Script" path="res://mob/mob.gd" id="1_75k6v"]
 [ext_resource type="Texture2D" uid="uid://bm7dnrtqcw352" path="res://icon.svg" id="2_4pdpd"]
 [ext_resource type="Texture2D" uid="uid://nr2sxlptypjb" path="res://lego.png" id="3_p56ak"]
+[ext_resource type="Texture2D" uid="uid://cwkuyb056dgxu" path="res://mob/Andesite_Wall_JE2_BE1.png" id="4_exyhw"]
+[ext_resource type="Texture2D" uid="uid://dn1rpadctrmua" path="res://mob/Cobblestone_Wall_JE2_BE2.png" id="5_einrv"]
+[ext_resource type="Texture2D" uid="uid://bmyv73ao2dnlu" path="res://mob/Diorite_Wall_JE3_BE1.png" id="6_2f2d8"]
+[ext_resource type="Texture2D" uid="uid://bj1rbfqlye3tg" path="res://mob/Mossy_Stone_Brick_Wall_JE1.png" id="7_xxhm3"]
+[ext_resource type="Texture2D" uid="uid://bsp1aexs2kif" path="res://mob/Stone_Brick_Wall_JE1.png" id="8_hhbch"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_521xx"]
-size = Vector2(126, 127.5)
+size = Vector2(112, 90)
 
 [node name="MOB" type="Area2D"]
 script = ExtResource("1_75k6v")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="BlueCollision" type="CollisionShape2D" parent="."]
 visible = false
 position = Vector2(-63, -63)
 shape = SubResource("RectangleShape2D_521xx")
+disabled = true
 
-[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
-position = Vector2(-1, -1)
+[node name="BlueSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-64, -64)
 texture = ExtResource("2_4pdpd")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+[node name="RedSprite" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-64, -63)
-shape = SubResource("RectangleShape2D_521xx")
-
-[node name="Sprite2D2" type="Sprite2D" parent="CollisionShape2D2"]
-position = Vector2(1, -2)
+position = Vector2(-55, -51)
 scale = Vector2(0.105505, 0.136944)
 texture = ExtResource("3_p56ak")
 
+[node name="AndesiteSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-78.5, -70.5)
+scale = Vector2(0.53, 0.463333)
+texture = ExtResource("4_exyhw")
+
+[node name="AndesiteCol" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(-78.5, -69.5522)
+scale = Vector2(0.530599, 0.465976)
+polygon = PackedVector2Array(68, -86.3, 68, -85.1, 71, -83.1, 71, -56, 96, -42.2, 96, 105, 93.5, 105, 38, 133.3, 38, 130.3, 9.5, 116, 6.39999, 116, -4, 119.9, -4, 117.3, -68, 86.3, -68, 85.1, -71, 83.1, -71, 76, -72.5, 76, -96, 63.2, -96, -84.2, -42.5, -112, -40.5, -112, -28.9, -105.8, -4, -117.2, -4, -120.2)
+disabled = true
+
+[node name="CobbleSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-80, -71)
+scale = Vector2(0.526667, 0.473333)
+texture = ExtResource("5_einrv")
+
+[node name="CobbleCol" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(-82.5, -71.9391)
+scale = Vector2(0.524089, 0.448718)
+polygon = PackedVector2Array(68, -86.3, 68, -85.1, 71, -83.1, 71, -56, 96, -42.2, 96, 105, 93.5, 105, 38, 133.3, 38, 130.3, 9.5, 116, 6.39999, 116, -4, 119.9, -4, 117.3, -68, 86.3, -68, 85.1, -71, 83.1, -71, 76, -72.5, 76, -96, 63.2, -96, -84.2, -42.5, -112, -40.5, -112, -28.9, -105.8, -4, -117.2, -4, -120.2)
+disabled = true
+
+[node name="DioriteSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-80.5, -70.5)
+scale = Vector2(0.536667, 0.47)
+texture = ExtResource("6_2f2d8")
+
+[node name="DioriteCol" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(-80.5, -70.9391)
+scale = Vector2(0.55013, 0.448718)
+polygon = PackedVector2Array(68, -86.3, 68, -85.1, 71, -83.1, 71, -56, 96, -42.2, 96, 105, 93.5, 105, 38, 133.3, 38, 130.3, 9.5, 116, 6.39999, 116, -4, 119.9, -4, 117.3, -68, 86.3, -68, 85.1, -71, 83.1, -71, 76, -72.5, 76, -96, 63.2, -96, -84.2, -42.5, -112, -40.5, -112, -28.9, -105.8, -4, -117.2, -4, -120.2)
+disabled = true
+
+[node name="MossySprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-79.5, -72)
+scale = Vector2(0.523333, 0.493333)
+texture = ExtResource("7_xxhm3")
+
+[node name="MossyCol" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(-77.5, -71.4875)
+scale = Vector2(0.537109, 0.456114)
+polygon = PackedVector2Array(68, -86.3, 68, -85.1, 71, -83.1, 71, -45.7, 96, -32.2, 96, 105, 93.5, 105, 38, 133.3, 38, 130.3, 9.5, 116, 6.39999, 116, -4, 119.9, -4, 117.3, -68, 86.3, -68, 85.1, -71, 83.1, -71, 76, -72.5, 76, -96, 63.2, -96, -74.2, -44.5, -101, -40.4, -101, -4, -117.3, -4, -120.2)
+disabled = true
+
+[node name="StoneSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-78, -73)
+scale = Vector2(0.533333, 0.493333)
+texture = ExtResource("8_hhbch")
+
+[node name="StoneCol" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(-80.5, -71.0037)
+scale = Vector2(0.530599, 0.45858)
+polygon = PackedVector2Array(68, -86.3, 68, -85.1, 71, -83.1, 71, -45.7, 96, -32.2, 96, 105, 93.5, 105, 38, 133.3, 38, 130.3, 9.5, 116, 6.39999, 116, -4, 119.9, -4, 117.3, -68, 86.3, -68, 85.1, -71, 83.1, -71, 76, -72.5, 76, -96, 63.2, -96, -74.2, -44.5, -101, -40.4, -101, -4, -117.3, -4, -120.2)
+disabled = true
+
+[node name="RedCol" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(-55, -51)
+scale = Vector2(0.105505, 0.136944)
+polygon = PackedVector2Array(-183.5, -282.6, -151.5, -275.6, -151.5, -274.3, -142.5, -270.3, -142.5, -268.8, -132.5, -258.8, -132.5, -255, -130.7, -237, -129.2, -237, -93.4, -227, -87.8, -227, -68.9, -235, -63.9, -235, -43.7, -239, -23.7, -239, -11.5, -240.2, -11.5, -238.7, 18.5, -233.7, 18.5, -232.4, 29.5, -228.4, 29.5, -226.9, 40.5, -217.9, 40.5, -215.3, 44.2, -194, 44.8, -194, 92.6, -181, 113.1, -190, 117.1, -190, 145.3, -195, 172.7, -195, 205.5, -188.7, 205.5, -187.4, 216.5, -183.4, 216.5, -182, 229.5, -172, 229.5, -169.4, 233.5, -160.4, 233.5, -147, 285.6, -133, 289, -133, 310, -143, 314.2, -143, 344.3, -148, 361.6, -148, 406.5, -141.7, 406.5, -140.4, 422.5, -134.4, 422.5, -132.9, 434.5, -122.9, 434.5, -120.5, 437.5, -114.5, 437.5, -96, 438.8, -96, 522.5, -74.6, 522.5, -73, 526.5, -70, 526.5, -48, 525.4, -48, 517.4, 202, 515.4, 202, 510.4, 208, 508, 208, 420.1, 262, 414.2, 262, 402, 258.5, 366.5, 278.1, 366.5, 279.2, 345.5, 291.1, 345.5, 293.2, 343.2, 307, 341.5, 307, 338.5, 311, 336, 311, 232.5, 373.3, 230.5, 372.2, 230.5, 371.4, -114.5, 254.4, -114.5, 253.1, -119.5, 250.1, -119.5, 242.5, -119.8, 242, -121.8, 242, -206.9, 212, -221.5, 219.2, -221.5, 216.4, -476.5, 129.4, -476.5, 128.4, -509.5, 117.4, -509.5, 116.1, -516.5, 112.2, -516.5, 107, -524.5, -148, -522.2, -148, -515.2, -154, -511.9, -154, -436.5, -180.4, -436.5, -201.8, -418.4, -221, -414.9, -221, -398.9, -227, -392.9, -227, -376.7, -230, -335.3, -230, -311.4, -224.4, -279.5, -235.5, -279.5, -248.3, -275, -263, -273.3, -263, -265.3, -271, -263.1, -271, -240.9, -280, -235.7, -280, -210.5, -282.8, -210.5, -284, -183.5, -284)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

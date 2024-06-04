@@ -148,7 +148,7 @@ size = Vector2(133, 62.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_30ys1"]
 size = Vector2(78, 109)
 
-[node name="Insaneplayer" type="CharacterBody2D"]
+[node name="Insaneplayer" type="CharacterBody2D" groups=["dinomax"]]
 script = ExtResource("1_5jopd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -160,8 +160,8 @@ animation = &"jump"
 position = Vector2(20.5, 35.25)
 shape = SubResource("RectangleShape2D_rna31")
 
-[node name="Run colision shape 2d" type="CollisionShape2D" parent="."]
-position = Vector2(20, 13)
+[node name="Runcolisionshape2d" type="CollisionShape2D" parent="."]
+position = Vector2(-5, 13)
 shape = SubResource("RectangleShape2D_30ys1")
 debug_color = Color(0.944838, 0.236151, 1.92523e-07, 0.42)
 
