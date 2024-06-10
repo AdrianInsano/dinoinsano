@@ -5,7 +5,7 @@ func _ready():
 	GHUD.mob_counter = GHUD.mob_counter + 1
 	var collisions = [
 		$BlueCollision, 
-		$RedCollision, 
+		$RedCol, 
 		$StoneCol, 
 		$MossyCol, 
 		$DioriteCol, 
@@ -26,7 +26,7 @@ func _ready():
 	var selected_collision = collisions[random_int]
 	var selected_sprite = sprites[random_int]
 	selected_sprite.visible = true
-	selected_collision.visible = true 
+	selected_collision.visible = true
 	selected_collision.disabled = false
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
